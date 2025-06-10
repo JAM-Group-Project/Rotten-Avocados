@@ -10,5 +10,7 @@ It consists of pulling data provided by The Movie Database, using different lang
 - **Database** ( Movies, “Users”, Lists, Ratings): 
     - PostgreSQL
 
-This was our first idea / template of what the website should look like and what should it do.
+# First template 🚗
+This was our first idea of what the website should look like and what should it do.
+
 ![image](https://github.com/user-attachments/assets/552de725-bef2-41f7-a6b6-c9d71a19dc43)
