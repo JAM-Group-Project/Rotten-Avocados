@@ -8,12 +8,14 @@ function App() {
           Hello this is a test website for Rotten Avocado 
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+          className="topnav"
+          href="#home"
+          aria-label="Rotten Avocado Home">
+          {/* <span className="topnav-title">Rotten Avocado</span> */}
+          <span className="topnav-links">
+            <a href="#Movies">Movies</a>
+            <a href="#shows">Shows</a>
+          </span>
         </a>
       </header>
     </div>
