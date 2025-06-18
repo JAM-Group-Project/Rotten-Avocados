@@ -1,21 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { NavLink } from "react-router";
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello this is a test website for Rotten Avocado and this is a test
+          Hello this is a test website for Rotten Avocado 
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+          className="topnav"
+          href="#home"
+          aria-label="Rotten Avocado Home">
+          {/* <span className="topnav-title">Rotten Avocado</span> */}
+          <span className="topnav-links">
+            <nav>
+              <NavLink to="/Movies" className="topnav-links">Movies</NavLink>
+              <NavLink to="/Shows" className="topnav-links">Shows</NavLink>
+            </nav>
+          </span>
         </a>
       </header>
     </div>
