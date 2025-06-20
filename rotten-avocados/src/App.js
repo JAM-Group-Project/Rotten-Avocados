@@ -1,23 +1,45 @@
 import './App.css';
+import React, { useState } from 'react';
+import Movie from './components/Movies';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello this is a test website for Rotten Avocado 
-        </p>
-        <a
-          className="topnav"
-          href="#home"
-          aria-label="Rotten Avocado Home">
-          {/* <span className="topnav-title">Rotten Avocado</span> */}
-          <span className="topnav-links">
-            <a href="#Movies">Movies</a>
-            <a href="#shows">Shows</a>
-          </span>
-        </a>
-      </header>
+      {/* Logo + Search Bar */}
+      <div className="header-top">
+        <h1 className="logo">Rotten Avocado</h1>
+        <input
+          className="search-bar"
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      </div>
+
+      {/* Navigation Bar */}
+      <div className="topnav">
+        <a className="active" href="#home">Home</a>
+        <a href="#Movies">Movies</a>
+        <a href="#Shows">Shows</a>
+      </div>
+
+      {/* Sections */}
+      <section id="Movies">
+        <h2>Movies</h2>
+        <Movie searchTerm={searchTerm} />
+      </section>
+
+      <section id="Shows">
+        <h2>Shows</h2>
+        <p>Coming soon...</p>
+      </section>
     </div>
   );
 }
