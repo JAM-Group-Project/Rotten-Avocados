@@ -12,10 +12,9 @@ function Shows() {
   );
 }
 
-function Title({ searchTerm, handleSearchChange }) {
+function Header({ searchTerm, handleSearchChange }) {
   return (
-    <div className="home-header">
-      <h1 className="logo">Rotten Avocado</h1>
+    <div className="header-container">
       <input
         className="search-bar"
         type="text"
@@ -23,9 +22,13 @@ function Title({ searchTerm, handleSearchChange }) {
         value={searchTerm}
         onChange={handleSearchChange}
       />
+      <Link to="/" className="logo-link">
+        <h1 className="logo">Rotten Avocado</h1>
+      </Link>
     </div>
   );
 }
+
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -37,9 +40,11 @@ function Home() {
   return (
     <Router>
       <div className="Home">
+        {/* Shared Header */}
+        <Header searchTerm={searchTerm} handleSearchChange={handleSearchChange} />
+
         {/* Navigation Bar */}
         <div className="topnav-links">
-          <Link className="active" to="/">Home</Link>
           <Link to="/movies">Movies</Link>
           <Link to="/shows">Shows</Link>
         </div>
@@ -48,7 +53,7 @@ function Home() {
         <Routes>
           <Route
             path="/"
-            element={<Title searchTerm={searchTerm} handleSearchChange={handleSearchChange} />}
+            element={<div className="home-welcome"><h2>Welcome to Rotten Avocado!</h2></div>}
           />
           <Route path="/movies" element={<Movie searchTerm={searchTerm} />} />
           <Route path="/shows" element={<Shows />} />
