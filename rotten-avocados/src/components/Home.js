@@ -1,7 +1,7 @@
-import './App.css';
+import './Home.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Movie from './components/Movies';
+import Movie from './Movies';
 
 function Shows() {
   return (
@@ -12,7 +12,7 @@ function Shows() {
   );
 }
 
-function Home({ searchTerm, handleSearchChange }) {
+function Title({ searchTerm, handleSearchChange }) {
   return (
     <div className="home-header">
       <h1 className="logo">Rotten Avocado</h1>
@@ -27,7 +27,7 @@ function Home({ searchTerm, handleSearchChange }) {
   );
 }
 
-function App() {
+function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (event) => {
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="Home">
         {/* Navigation Bar */}
         <div className="topnav-links">
           <Link className="active" to="/">Home</Link>
@@ -48,7 +48,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home searchTerm={searchTerm} handleSearchChange={handleSearchChange} />}
+            element={<Title searchTerm={searchTerm} handleSearchChange={handleSearchChange} />}
           />
           <Route path="/movies" element={<Movie searchTerm={searchTerm} />} />
           <Route path="/shows" element={<Shows />} />
@@ -58,4 +58,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
