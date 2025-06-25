@@ -3,14 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #fff;
-  border-bottom: 2px solid #ccc;
+  background-color:rgba(129, 223, 86, 0.616);
+  border-bottom: 2px ;
 }
 
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #282834;
+  color: bl;
 }
 
 .search-bar {
@@ -32,17 +32,16 @@
 .topnav a {
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 20px;
+  padding: 14px 200px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: green;
   color: black;
 }
 
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-}
+
+
+

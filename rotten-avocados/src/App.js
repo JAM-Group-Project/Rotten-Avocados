@@ -25,7 +25,6 @@ function App() {
 
       {/* Navigation Bar */}
       <div className="topnav">
-        <a className="active" href="#home">Home</a>
         <a href="#Movies">Movies</a>
         <a href="#Shows">Shows</a>
       </div>
@@ -36,6 +35,11 @@ function App() {
         <Movie searchTerm={searchTerm} />
       </section>
 
+      <section id = "Weekly Top ">
+        <h2>Weekly Top</h2>
+        <p>Coming soon...</p>
+      </section>
+      
       <section id="Shows">
         <h2>Shows</h2>
         <p>Coming soon...</p>
