@@ -14,3 +14,5 @@ It consists of pulling data provided by The Movie Database, using different lang
 This was our first idea of what the website should look like and what should it do.
 
 ![image](https://github.com/user-attachments/assets/552de725-bef2-41f7-a6b6-c9d71a19dc43)
+
+![image](https://github.com/user-attachments/assets/04a04890-6ef5-42a1-a013-841e53cfe4ec)
