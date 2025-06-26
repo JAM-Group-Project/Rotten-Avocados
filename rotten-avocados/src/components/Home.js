@@ -1,7 +1,7 @@
-import './App.css';
+import './Home.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Movie from './components/Movies';
+import Movie from './Movies';
 
 function Shows() {
   return (
@@ -12,10 +12,9 @@ function Shows() {
   );
 }
 
-function Home({ searchTerm, handleSearchChange }) {
+function Header({ searchTerm, handleSearchChange }) {
   return (
-    <div className="home-header">
-      <h1 className="logo">Rotten Avocado</h1>
+    <div className="header-container">
       <input
         className="search-bar"
         type="text"
@@ -23,11 +22,15 @@ function Home({ searchTerm, handleSearchChange }) {
         value={searchTerm}
         onChange={handleSearchChange}
       />
+      <Link to="/" className="logo-link">
+        <h1 className="logo">Rotten Avocado</h1>
+      </Link>
     </div>
   );
 }
 
-function App() {
+
+function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (event) => {
@@ -36,10 +39,12 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="Home">
+        {/* Shared Header */}
+        <Header searchTerm={searchTerm} handleSearchChange={handleSearchChange} />
+
         {/* Navigation Bar */}
         <div className="topnav-links">
-          <Link className="active" to="/">Home</Link>
           <Link to="/movies">Movies</Link>
           <Link to="/shows">Shows</Link>
         </div>
@@ -48,7 +53,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home searchTerm={searchTerm} handleSearchChange={handleSearchChange} />}
+            element={<div className="home-welcome"><h2>Welcome to Rotten Avocado!</h2></div>}
           />
           <Route path="/movies" element={<Movie searchTerm={searchTerm} />} />
           <Route path="/shows" element={<Shows />} />
@@ -58,4 +63,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
