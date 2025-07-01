@@ -18,6 +18,17 @@ function Movie({ searchTerm }) {
       .then(json => setMovieList(json.results || []));
   };
 
+  // API for shows trending: 
+  // curl --request GET \
+  //    --url 'https://api.themoviedb.org/3/trending/tv/day?language=en-US' \
+  //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
+  //    --header 'accept: application/json'
+
+  // API for shows search: 
+  // curl --request GET \
+  //    --url 'https://api.themoviedb.org/3/search/tv?include_adult=false&language=en-US&page=1' \
+  //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
+  //    --header 'accept: application/json'
 
 
   useEffect(() => {
