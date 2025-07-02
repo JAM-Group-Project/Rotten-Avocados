@@ -5,11 +5,11 @@ function Movie({ searchTerm }) {
   const API_KEY = "6bff30742e46b5d624e5b0376351ba35";
   const [movieList, setMovieList] = useState([]);
 
-  // const getMovie = () => {
-  //   fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`)
-  //     .then(res => res.json())
-  //     .then(json => setMovieList(json.results));
-  // };
+  const getMovie = () => {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`)
+      .then(res => res.json())
+      .then(json => setMovieList(json.results));
+  };
 
     const TrendingMovies = () => {
     fetch (`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
