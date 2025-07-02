@@ -11,19 +11,51 @@ function Movie({ searchTerm }) {
       .then(json => setMovieList(json.results));
   };
 
-  useEffect(() => {
-    getMovie();
-  }, []);
+  const TrendingMovies = () => {
+    fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
+      .then(res => res.json())
+      .then(json => setMovieList(json.results || []));
+  }
 
-  // Filter movies based on the search term
-  const filteredMovies = movieList.filter(movie =>
-    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const searchMovies = (query) => {
+    fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`, {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw',
+        'accept': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(json => setMovieList(json.results || []));
+  };
+
+  
+
+  // Alex: I'll modify this so that it will be implemented but I need a working redirect page first, as well as the search button for the differents pages
+  // API for shows trending:
+  // curl --request GET \
+  //    --url 'https://api.themoviedb.org/3/trending/tv/day?language=en-US' \
+  //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
+  //    --header 'accept: application/json'
+
+  // API for shows search: 
+  // curl --request GET \
+  //    --url 'https://api.themoviedb.org/3/search/tv?include_adult=false&language=en-US&page=1' \
+  //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
+  //    --header 'accept: application/json'
+
+  useEffect(() => {
+    if (searchTerm && searchTerm.trim()) {
+      searchMovies(searchTerm);
+    } else {
+      getMovie();
+    }
+  }, [searchTerm]);
 
   return (
     <div className="movies-container">
       <div className="movies-grid">
-        {filteredMovies.map((movie) => (
+        {movieList.map((movie) => (
           <div key={movie.id} className="movie-card">
             <img 
               className="movie-poster"
@@ -34,8 +66,8 @@ function Movie({ searchTerm }) {
               <h3 className="movie-title">{movie.title}</h3>
               <p className="movie-overview">{movie.overview}</p>
               <div className="movie-rating">
-                <span className="rating-star"></span>
-                {movie.vote_average.toFixed(1)}
+                <span className="rating-star">⭐</span>
+                {movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A'}
               </div>
             </div>
           </div>
