@@ -23,6 +23,7 @@ function Movie({ searchTerm }) {
       .then(json => setMovieList(json.results || []));
   };
 
+  // Alex: I'll modify this so that it will be implemented but I need a working redirect page first, as well as the search button for the differents pages
   // API for shows trending:
   // curl --request GET \
   //    --url 'https://api.themoviedb.org/3/trending/tv/day?language=en-US' \
