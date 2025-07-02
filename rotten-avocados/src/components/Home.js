@@ -27,6 +27,14 @@ function Title({ searchTerm, handleSearchChange }) {
   );
 }
 
+function Bottom() {
+  return (
+    <div className="home-bottom">
+      
+    </div>
+  )
+}
+
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 

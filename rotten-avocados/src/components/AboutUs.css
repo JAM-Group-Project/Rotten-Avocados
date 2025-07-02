@@ -1,0 +1,17 @@
+.AboutUS {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  border: 20px;
+  padding: 20px 40px;
+  /* background-color:rgba(129, 223, 86, 0.616);
+  border-bottom: 2px ; */
+}
+
+.Who {
+    /* display: ; */
+}
+
+.People {
+    display: block;
+}
