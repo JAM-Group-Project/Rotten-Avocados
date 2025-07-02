@@ -107,3 +107,29 @@
     padding: 10px;
   }
 }
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.pagination-buttons button {
+  background-color: #282834;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-buttons button:hover {
+  background-color: green;
+}
+
+.pagination-buttons .active {
+  background-color: green;
+  font-weight: bold;
+}
