@@ -2,6 +2,7 @@ import './Home.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Movie from './Movies';
+import MovieDetail from './MovieDetail'; // ✅ ADD THIS IMPORT
 
 function Shows() {
   return (
@@ -28,7 +29,6 @@ function Header({ searchTerm, handleSearchChange }) {
     </div>
   );
 }
-
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -57,6 +57,7 @@ function Home() {
           />
           <Route path="/movies" element={<Movie searchTerm={searchTerm} />} />
           <Route path="/shows" element={<Shows />} />
+          <Route path="/movie/:id" element={<MovieDetail />} /> 
         </Routes>
       </div>
     </Router>
