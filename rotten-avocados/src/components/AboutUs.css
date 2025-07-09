@@ -1,4 +1,5 @@
 .AboutUS {
+  font-size: large;
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
@@ -14,4 +15,23 @@
 
 .People {
     display: block;
+}
+
+.MPerson {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between; 
+  gap: 20px;               
+}
+
+/* .MText {
+  flex: 1;
+} */
+
+.MImage img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
