@@ -6,22 +6,10 @@ function Show({ searchTerm }) {
     const [showList, setShowList] = useState([]);
 
     const TrendingShows = () => {
-        fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}`)
+        fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=${API_KEY}`)
             .then(res => res.json())
             .then(json => setShowList(json.results || []));
     }
-    // Alex: I'll modify this so that it will be implemented but I need a working redirect page first, as well as the search button for the differents pages
-    // API for shows trending:
-    // curl --request GET \
-    //    --url 'https://api.themoviedb.org/3/trending/tv/day?language=en-US' \
-    //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
-    //    --header 'accept: application/json'
-
-    // API for shows search: 
-    // curl --request GET \
-    //    --url 'https://api.themoviedb.org/3/search/tv?include_adult=false&language=en-US&page=1' \
-    //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
-    //    --header 'accept: application/json'
 
     const searchShows = (query) => {
         fetch(`https://api.themoviedb.org/3/search/tv?query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`, {
