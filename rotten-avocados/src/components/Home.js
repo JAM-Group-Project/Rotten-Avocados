@@ -3,15 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Movie from './Movies';
 import MovieDetail from './MovieDetail'; // ✅ ADD THIS IMPORT
-
-function Shows() {
-  return (
-    <div className="shows-page">
-      <h2>Shows</h2>
-      <p>Shows section is under construction!</p>
-    </div>
-  );
-}
+import Show from './Shows';
 
 function Header({ searchTerm, handleSearchChange }) {
   return (
@@ -56,7 +48,7 @@ function Home() {
             element={<div className="home-welcome"><h2>Welcome to Rotten Avocado!</h2></div>}
           />
           <Route path="/movies" element={<Movie searchTerm={searchTerm} />} />
-          <Route path="/shows" element={<Shows />} />
+          <Route path="/shows" element={<Show searchTerm={searchTerm} />} />
           <Route path="/movie/:id" element={<MovieDetail />} /> 
         </Routes>
       </div>
