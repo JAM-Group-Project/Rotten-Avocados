@@ -52,7 +52,20 @@ function AboutUs() {
           <img src={AHeadshot} alt={"AHeadshot"} />
         </div> */}
         <div className="AText">
-          <p>A student at JMU, interested in game development.</p>
+          <p>
+            Hello! Computer science major at James Madison University, I have always had an interest about how things could be created and optimized so well, just with lines of code.
+          </p>
+
+          <p> 
+            This is the first project I have worked on with a team, using React and Node.js.  
+            <br />
+            Having to work on front end for the first time was definitely something I enjoyed, seeing how the website was taking life as I was coding it.
+            <br />
+          </p>
+
+          <p> 
+          I cannot wait to see how far we can take this project, since it already gave me the inspiration to make more developing projects.
+          </p>
         </div>
       </div>
       <div className="MHeader">
