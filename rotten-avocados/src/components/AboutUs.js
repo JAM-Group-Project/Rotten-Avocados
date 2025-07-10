@@ -4,8 +4,10 @@ import MHeadshot from "./images/MicahHeadshot.JPG";
 function AboutUs() {
   return (
     <div className="AboutUS">
-      <div className="Who">
+      <div className="WhoTitle">
         <h2>Who we are:</h2>
+      </div>
+      <div className="WhoText">
         <p>
           We are JAM, a dedicated team of three developers committed to
           advancing our expertise in both front-end and back-end web
@@ -39,9 +41,7 @@ function AboutUs() {
           <img src={JHeadshot} alt={"JHeadshot"} />
         </div> */}
         <div className="JText">
-          <p>
-            A student at JMU, interested in machine learning.
-          </p>
+          <p>A student at JMU, interested in machine learning.</p>
         </div>
       </div>
       <div className="AHeader">
@@ -52,9 +52,7 @@ function AboutUs() {
           <img src={AHeadshot} alt={"AHeadshot"} />
         </div> */}
         <div className="AText">
-          <p>
-            A student at JMU, interested in game development.
-          </p>
+          <p>A student at JMU, interested in game development.</p>
         </div>
       </div>
       <div className="MHeader">

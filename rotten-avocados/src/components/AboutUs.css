@@ -1,32 +1,84 @@
 .AboutUS {
+  padding: 20px 60px;
   font-size: large;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   border: 20px;
-  padding: 20px 40px;
-  /* background-color:rgba(129, 223, 86, 0.616);
-  border-bottom: 2px ; */
 }
 
-.Who {
-    /* display: ; */
+.WhoTitle {
+  font-size: large;
 }
 
-.People {
-    display: block;
+.WhoText {
+  font-size: medium;
+  padding: 0px 20px;
+}
+
+.JHeader {
+  font-size: large;
+}
+
+.JPerson {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+  padding: 0px 20px; 
+  gap: 20px;               
+}
+
+.JText {
+  font-size: medium;
+  flex: 1;
+}
+
+.JImage img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.AHeader {
+  font-size: large;
+}
+
+.APerson {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+  padding: 0px 20px;
+  gap: 20px;               
+}
+
+.AText {
+  font-size: medium;
+  flex: 1;
+}
+
+.AImage img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.MHeader {
+  font-size: large;
 }
 
 .MPerson {
   display: flex;
   align-items: center;      
-  justify-content: space-between; 
+  justify-content: space-between;
+  padding: 0px 20px;
   gap: 20px;               
 }
 
-/* .MText {
+.MText {
+  font-size: medium;
   flex: 1;
-} */
+}
 
 .MImage img {
   max-width: 200px;
