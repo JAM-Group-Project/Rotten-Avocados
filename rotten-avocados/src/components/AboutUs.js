@@ -1,6 +1,6 @@
 import "./AboutUs.css";
 import MHeadshot from "./images/MicahHeadshot.JPG";
-import AHeadshot from "./images/AlexHeadshot.JPG";
+import AHeadshot from "./images/AlexHeadshot.jpg";
 function AboutUs() {
   return (
     <div className="AboutUS">
