@@ -1,6 +1,6 @@
 import "./AboutUs.css";
 import MHeadshot from "./images/MicahHeadshot.JPG";
-
+import AHeadshot from "./images/AlexHeadshot.JPG";
 function AboutUs() {
   return (
     <div className="AboutUS">
@@ -48,9 +48,9 @@ function AboutUs() {
         <h3>Alex Nguyen</h3>
       </div>
       <div className="APerson">
-        {/* <div className="AImage">
+        <div className="AImage">
           <img src={AHeadshot} alt={"AHeadshot"} />
-        </div> */}
+        </div>
         <div className="AText">
           <p>
             Hello! Computer science major at James Madison University, I have always had an interest about how things could be created and optimized so well, just with lines of code.
