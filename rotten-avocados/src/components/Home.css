@@ -6,6 +6,7 @@
   background-color: green;
   border-bottom: 2px;
 }
+.header
 
 .search-bar {
   padding: 10px;
@@ -23,6 +24,12 @@
   font-size: 36px;
   color: #333;
   margin: 0;
+}
+.logo:hover {
+background-color:rgb(62, 37, 4);
+  color: green;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* Navigation bar */
@@ -45,9 +52,7 @@
   background-color: green;
 }
 
-/* General page content */
-.home-welcome,
-.shows-page {
-  text-align: center;
-  padding: 40px;
+.topnav-links a.active {
+  background-color: green;
+  color: white;
 }
