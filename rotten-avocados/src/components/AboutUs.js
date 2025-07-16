@@ -1,5 +1,7 @@
 import "./AboutUs.css";
 import MHeadshot from "./images/MicahHeadshot.JPG";
+import github from "./images/github.png";
+import gmail from "./images/gmail.png";
 
 function AboutUs() {
   return (
@@ -53,18 +55,24 @@ function AboutUs() {
         </div> */}
         <div className="AText">
           <p>
-            Hello! Computer science major at James Madison University, I have always had an interest about how things could be created and optimized so well, just with lines of code.
+            Hello! Computer science major at James Madison University, I have
+            always had an interest about how things could be created and
+            optimized so well, just with lines of code.
           </p>
 
-          <p> 
-            This is the first project I have worked on with a team, using React and Node.js.  
+          <p>
+            This is the first project I have worked on with a team, using React
+            and Node.js.
             <br />
-            Having to work on front end for the first time was definitely something I enjoyed, seeing how the website was taking life as I was coding it.
+            Having to work on front end for the first time was definitely
+            something I enjoyed, seeing how the website was taking life as I was
+            coding it.
             <br />
           </p>
 
-          <p> 
-          I cannot wait to see how far we can take this project, since it already gave me the inspiration to make more developing projects.
+          <p>
+            I cannot wait to see how far we can take this project, since it
+            already gave me the inspiration to make more developing projects.
           </p>
         </div>
       </div>
@@ -74,6 +82,18 @@ function AboutUs() {
       <div className="MPerson">
         <div className="MImage">
           <img src={MHeadshot} alt={"MHeadshot"} />
+          <div className="MContact">
+            <div className="MGithub">
+              <a href="https://github.com/bjorkgmd">
+                <img src={github} alt={"github"} />
+              </a>
+            </div>
+            <div className="MGmail">
+              <a href="mailto:mhdbjork@gmail.com">
+                  <img src={gmail} alt={"gmail"} />
+              </a>
+            </div>
+          </div>
         </div>
         <div className="MText">
           <p>
