@@ -5,12 +5,6 @@ function Movie({ searchTerm }) {
   const API_KEY = "6bff30742e46b5d624e5b0376351ba35";
   const [movieList, setMovieList] = useState([]);
 
-  const getMovie = () => {
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`)
-      .then(res => res.json())
-      .then(json => setMovieList(json.results));
-  };
-
   const TrendingMovies = () => {
     fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
       .then(res => res.json())
@@ -29,26 +23,13 @@ function Movie({ searchTerm }) {
       .then(json => setMovieList(json.results || []));
   };
 
-  
 
-  // Alex: I'll modify this so that it will be implemented but I need a working redirect page first, as well as the search button for the differents pages
-  // API for shows trending:
-  // curl --request GET \
-  //    --url 'https://api.themoviedb.org/3/trending/tv/day?language=en-US' \
-  //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
-  //    --header 'accept: application/json'
-
-  // API for shows search: 
-  // curl --request GET \
-  //    --url 'https://api.themoviedb.org/3/search/tv?include_adult=false&language=en-US&page=1' \
-  //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmZmMzA3NDJlNDZiNWQ2MjRlNWIwMzc2MzUxYmEzNSIsIm5iZiI6MTc1MDI1NjYxMS4xMjIsInN1YiI6IjY4NTJjYmUzZjZiYzkxNGJiNWZiNTJiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJCLdC161u5UYFrlZaE8Vk2w8aTmWBaiKoChuCEgjvw' \
-  //    --header 'accept: application/json'
 
   useEffect(() => {
     if (searchTerm && searchTerm.trim()) {
       searchMovies(searchTerm);
     } else {
-      getMovie();
+      TrendingMovies();
     }
   }, [searchTerm]);
 
@@ -57,7 +38,7 @@ function Movie({ searchTerm }) {
       <div className="movies-grid">
         {movieList.map((movie) => (
           <div key={movie.id} className="movie-card">
-            <img 
+            <img
               className="movie-poster"
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
