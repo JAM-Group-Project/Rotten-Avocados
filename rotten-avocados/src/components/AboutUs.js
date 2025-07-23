@@ -39,6 +39,14 @@ function AboutUs() {
       <div className="JPerson">
         {/* <div className="JImage">
           <img src={JHeadshot} alt={"JHeadshot"} />
+          <div className="email-icons">
+            <a href="mailto:joseph@gmail.com" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
+            </a>
+            <a href="mailto:joseph@outlook.com" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
+            </a>
+          </div>
         </div> */}
         <div className="JText">
           <p>A student at JMU, interested in machine learning.</p>
@@ -50,6 +58,14 @@ function AboutUs() {
       <div className="APerson">
         <div className="AImage">
           <img src={AHeadshot} alt={"AHeadshot"} />
+          <div className="email-icons">
+            <a href="mailto:alexngn05@gmail.com" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
+            </a>
+            <a href="mailto:nguye5aq@dukes.jmu.edu" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
+            </a>
+          </div>
         </div>
         <div className="AText">
           <p>
@@ -74,6 +90,14 @@ function AboutUs() {
       <div className="MPerson">
         <div className="MImage">
           <img src={MHeadshot} alt={"MHeadshot"} />
+          <div className="email-icons">
+            <a href="mailto:micah@gmail.com" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
+            </a>
+            <a href="mailto:micah@dukes.jmu.edu" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
+            </a>
+          </div>
         </div>
         <div className="MText">
           <p>
