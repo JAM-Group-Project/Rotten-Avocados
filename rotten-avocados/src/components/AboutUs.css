@@ -92,8 +92,8 @@
 .email-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .email-link {
@@ -105,7 +105,13 @@
 }
 
 .email-icon {
-  width: 3px;
-  height: 3px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
