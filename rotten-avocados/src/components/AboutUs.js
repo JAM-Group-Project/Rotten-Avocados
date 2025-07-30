@@ -38,7 +38,7 @@ function AboutUs() {
       </div>
       <div className="JPerson">
         {/* <div className="JImage">
-          <img src={JHeadshot} alt={"JHeadshot"} />
+          <img src={JHeadshot} alt={"JHeadshot"} className="headshot" />
           <div className="email-icons">
             <a href="mailto:joseph@gmail.com" className="email-link"> // Joseph put your email and other stuff here
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
@@ -60,7 +60,7 @@ function AboutUs() {
       </div>
       <div className="APerson">
         <div className="AImage">
-          <img src={AHeadshot} alt={"AHeadshot"} />
+          <img src={AHeadshot} alt={"AHeadshot"} className="headshot" />
           <div className="email-icons">
             <a href="mailto:alexngn05@gmail.com" className="email-link">
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
@@ -95,14 +95,16 @@ function AboutUs() {
       </div>
       <div className="MPerson">
         <div className="MImage">
-          <img src={MHeadshot} alt={"MHeadshot"} />
+          <img src={MHeadshot} alt={"MHeadshot"} className="headshot" />
           <div className="email-icons">
-            {/* <a href="mailto:micah@gmail.com" className="email-link"> // Micah put your gmail hjere
+            <a href="mailto:micah@gmail.com" className="email-link"> 
+              {/* // Micah put your gmail hjere */}
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
-            </a> */}
-            {/* <a href="mailto:micah@dukes.jmu.edu" className="email-link"> // Micah put your outlook email here
+            </a>
+            <a href="mailto:micah@dukes.jmu.edu" className="email-link">  
+              {/* Micah put your outlook email here */}
               <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
-            </a> */}
+            </a>
             <a href="https://github.com/bjorkgmd" target="_blank" rel="noopener noreferrer" className="email-link">
               <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" className="github-icon" />
             </a>
