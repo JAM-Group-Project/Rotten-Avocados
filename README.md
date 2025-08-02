@@ -8,7 +8,7 @@ It consists of pulling data provided by The Movie Database, using different lang
     - node.js ( for Java script full-stack ) + Express
     - FastAPI
 - **Database** ( Movies, “Users”, Lists, Ratings): 
-    - PostgreSQL
+    - PostgreSQL, IMDB API 
 
 # First template 🚗
 This was our first idea of what the website should look like and what should it do.
