@@ -1,8 +1,6 @@
 import "./AboutUs.css";
 import MHeadshot from "./images/MicahHeadshot.JPG";
-import github from "./images/github.png";
-import gmail from "./images/gmail.png";
-
+import AHeadshot from "./images/AlexHeadshot.jpg";
 function AboutUs() {
   return (
     <div className="AboutUS">
@@ -40,7 +38,18 @@ function AboutUs() {
       </div>
       <div className="JPerson">
         {/* <div className="JImage">
-          <img src={JHeadshot} alt={"JHeadshot"} />
+          <img src={JHeadshot} alt={"JHeadshot"} className="headshot" />
+          <div className="email-icons">
+            <a href="mailto:joseph@gmail.com" className="email-link"> // Joseph put your email and other stuff here
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
+            </a>
+            <a href="mailto:joseph@outlook.com" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
+            </a>
+            <a href="https://github.com/Giltson1" target="_blank" rel="noopener noreferrer" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" className="github-icon" />
+            </a>
+          </div>
         </div> */}
         <div className="JText">
           <p>A student at JMU, interested in machine learning.</p>
@@ -50,9 +59,20 @@ function AboutUs() {
         <h3>Alex Nguyen</h3>
       </div>
       <div className="APerson">
-        {/* <div className="AImage">
-          <img src={AHeadshot} alt={"AHeadshot"} />
-        </div> */}
+        <div className="AImage">
+          <img src={AHeadshot} alt={"AHeadshot"} className="headshot" />
+          <div className="email-icons">
+            <a href="mailto:alexngn05@gmail.com" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
+            </a>
+            <a href="mailto:nguye5aq@dukes.jmu.edu" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
+            </a>
+            <a href="https://github.com/Alex-Ng10" target="_blank" rel="noopener noreferrer" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" className="github-icon" />
+            </a>
+          </div>
+        </div>
         <div className="AText">
           <p>
             Hello! Computer science major at James Madison University, I have
@@ -81,18 +101,19 @@ function AboutUs() {
       </div>
       <div className="MPerson">
         <div className="MImage">
-          <img src={MHeadshot} alt={"MHeadshot"} />
-          <div className="MContact">
-            <div className="MGithub">
-              <a href="https://github.com/bjorkgmd">
-                <img src={github} alt={"github"} />
-              </a>
-            </div>
-            <div className="MGmail">
-              <a href="mailto:mhdbjork@gmail.com">
-                  <img src={gmail} alt={"gmail"} />
-              </a>
-            </div>
+          <img src={MHeadshot} alt={"MHeadshot"} className="headshot" />
+          <div className="email-icons">
+            <a href="mailto:micah@gmail.com" className="email-link"> 
+              {/* // Micah put your gmail hjere */}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
+            </a>
+            <a href="mailto:micah@dukes.jmu.edu" className="email-link">  
+              {/* Micah put your outlook email here */}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
+            </a>
+            <a href="https://github.com/bjorkgmd" target="_blank" rel="noopener noreferrer" className="email-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" className="github-icon" />
+            </a>
           </div>
         </div>
         <div className="MText">

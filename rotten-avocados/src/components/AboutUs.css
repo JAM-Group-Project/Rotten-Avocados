@@ -38,6 +38,14 @@
   object-fit: contain;
 }
 
+.JImage .headshot {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .AHeader {
   font-size: large;
 }
@@ -56,6 +64,14 @@
 }
 
 .AImage img {
+  max-width: 35px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.AImage .headshot {
   max-width: 200px;
   width: 100%;
   height: auto;
@@ -81,6 +97,14 @@
 }
 
 .MImage img {
+  max-width: 35px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.MImage .headshot {
   max-width: 200px;
   width: 100%;
   height: auto;
@@ -88,15 +112,30 @@
   object-fit: contain;
 }
 
-.MContact {
+/* Email icons styles */
+.email-icons {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  align-items: center;
+  margin-top: 8px;
 }
 
-.MContact img {
-  max-width: 35px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+.email-link {
+  transition: transform 0.3s ease;
+}
+
+.email-link:hover {
+  transform: scale(1.1);
+}
+
+.email-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
