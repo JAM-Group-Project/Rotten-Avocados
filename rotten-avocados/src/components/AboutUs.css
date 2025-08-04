@@ -1,0 +1,141 @@
+.AboutUS {
+  padding: 20px 60px;
+  font-size: large;
+  border: 20px;
+}
+
+.WhoTitle {
+  font-size: large;
+}
+
+.WhoText {
+  font-size: medium;
+  padding: 0px 20px;
+}
+
+.JHeader {
+  font-size: large;
+}
+
+.JPerson {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+  padding: 0px 20px; 
+  gap: 20px;               
+}
+
+.JText {
+  font-size: medium;
+  flex: 1;
+}
+
+.JImage img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.JImage .headshot {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.AHeader {
+  font-size: large;
+}
+
+.APerson {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+  padding: 0px 20px;
+  gap: 20px;               
+}
+
+.AText {
+  font-size: medium;
+  flex: 1;
+}
+
+.AImage img {
+  max-width: 35px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.AImage .headshot {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.MHeader {
+  font-size: large;
+}
+
+.MPerson {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+  padding: 0px 20px;
+  gap: 20px;               
+}
+
+.MText {
+  font-size: medium;
+  flex: 1;
+}
+
+.MImage img {
+  max-width: 35px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.MImage .headshot {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Email icons styles */
+.email-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.email-link {
+  transition: transform 0.3s ease;
+}
+
+.email-link:hover {
+  transform: scale(1.1);
+}
+
+.email-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
