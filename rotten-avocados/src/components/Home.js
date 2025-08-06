@@ -6,6 +6,7 @@ import AboutUs from './AboutUs';
 import MovieDetail from './MovieDetail';
 import Show from './Shows';
 import ShowDetail from './ShowsDetail';
+import Favorites from './Favorites';
 
 function Header({ searchTerm, handleSearchChange }) {
   return (
@@ -100,9 +101,31 @@ function Section({ title, items, isMovie }) {
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  // For the Favorites functionality
+  const handleAddFavorite = (item, type) => {
+    const favoriteItem = { ...item, type };
+    setFavorites(prev => {
+      // Check if item already exists
+      const exists = prev.some(fav => fav.id === item.id && fav.type === type);
+      if (!exists) {
+        return [...prev, favoriteItem];
+      }
+      return prev;
+    });
+  };
+
+  const handleRemoveFavorite = (id, type) => {
+    setFavorites(prev => prev.filter(fav => !(fav.id === id && fav.type === type)));
+  };
+
+  const isFavorited = (id, type) => {
+    return favorites.some(fav => fav.id === id && fav.type === type);
   };
 
   return (
@@ -115,14 +138,44 @@ function Home() {
         <div className="topnav-links">
           <Link to="/movies">Movies</Link>
           <Link to="/shows">Shows</Link>
+          <Link to="/favorites">Favorites</Link>
           <Link to="/AboutUs">AboutUs</Link>
         </div>
 
         {/* Routes */}
         <Routes>
           <Route path="/" element={<HomeContent />} />
-          <Route path="/movies" element={<Movie searchTerm={searchTerm} />} />
-          <Route path="/shows" element={<Show searchTerm={searchTerm} />} />
+          <Route 
+            path="/movies" 
+            element={
+              <Movie 
+                searchTerm={searchTerm} 
+                onAddFavorite={handleAddFavorite}
+                onRemoveFavorite={handleRemoveFavorite}
+                isFavorited={isFavorited}
+              />
+            } 
+          />
+          <Route 
+            path="/shows" 
+            element={
+              <Show 
+                searchTerm={searchTerm} 
+                onAddFavorite={handleAddFavorite}
+                onRemoveFavorite={handleRemoveFavorite}
+                isFavorited={isFavorited}
+              />
+            } 
+          />
+          <Route 
+            path="/favorites" 
+            element={
+              <Favorites 
+                favorites={favorites} 
+                onRemoveFavorite={handleRemoveFavorite}
+              />
+            } 
+          />
           <Route path="/movie/:id" element={<MovieDetail />} />
           <Route path="/shows/:id" element={<ShowDetail />} />
           <Route path="/AboutUs" element={<AboutUs />} />

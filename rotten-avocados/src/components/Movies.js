@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Movies.css";
 
-function Movie({ searchTerm }) {
+function Movie({ searchTerm, onAddFavorite, onRemoveFavorite, isFavorited }) {
   const API_KEY = "6bff30742e46b5d624e5b0376351ba35";
   const [movieList, setMovieList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -78,6 +78,21 @@ function Movie({ searchTerm }) {
       <div className="movies-grid">
         {movieList.map((movie) => (
           <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-card">
+            <button
+              className={`favorite-heart ${isFavorited && isFavorited(movie.id, 'movie') ? 'favorited' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (isFavorited && isFavorited(movie.id, 'movie')) {
+                  onRemoveFavorite && onRemoveFavorite(movie.id, 'movie');
+                } else {
+                  onAddFavorite && onAddFavorite(movie, 'movie');
+                }
+              }}
+              title={isFavorited && isFavorited(movie.id, 'movie') ? 'Remove from favorites' : 'Add to favorites'}
+            >
+              ♥
+            </button>
             <img
               className="movie-poster"
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

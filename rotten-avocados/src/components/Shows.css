@@ -19,6 +19,7 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    position: relative;
 }
 
 .show-card:hover {
@@ -53,6 +54,7 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -67,6 +69,37 @@
 .rating-star {
     color: #ffd700;
     margin-right: 5px;
+}
+/* For the favorite functionality */
+.favorite-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border: none;
+    font-size: 16px;
+}
+
+.favorite-heart:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.favorite-heart.favorited {
+    color: #ff4757;
+}
+
+.favorite-heart:not(.favorited) {
+    color: #ddd;
 }
 
 /* Responsive design */

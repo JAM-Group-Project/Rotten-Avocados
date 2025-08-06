@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Shows.css';
 
-function Show({ searchTerm }) {
+function Show({ searchTerm, onAddFavorite, onRemoveFavorite, isFavorited }) {
   const API_KEY = "6bff30742e46b5d624e5b0376351ba35";
   const [showList, setShowList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -66,6 +66,21 @@ function Show({ searchTerm }) {
       <div className="shows-grid">
         {showList.map((show) => (
           <Link to={`/shows/${show.id}`} key={show.id} className="show-card">
+            <button
+              className={`favorite-heart ${isFavorited && isFavorited(show.id, 'show') ? 'favorited' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (isFavorited && isFavorited(show.id, 'show')) {
+                  onRemoveFavorite && onRemoveFavorite(show.id, 'show');
+                } else {
+                  onAddFavorite && onAddFavorite(show, 'show');
+                }
+              }}
+              title={isFavorited && isFavorited(show.id, 'show') ? 'Remove from favorites' : 'Add to favorites'}
+            >
+              ♥
+            </button>
             <img
               className="show-poster"
               src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
