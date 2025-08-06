@@ -103,6 +103,25 @@ function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [favorites, setFavorites] = useState([]);
 
+  // Load favorites from localStorage on component mount
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('rottenAvocadoFavorites');
+    if (savedFavorites) {
+      try {
+        const parsedFavorites = JSON.parse(savedFavorites);
+        setFavorites(parsedFavorites);
+      } catch (error) {
+        console.error('Error parsing saved favorites:', error);
+        localStorage.removeItem('rottenAvocadoFavorites');
+      }
+    }
+  }, []);
+
+  // Save favorites to localStorage whenever favorites change
+  useEffect(() => {
+    localStorage.setItem('rottenAvocadoFavorites', JSON.stringify(favorites));
+  }, [favorites]);
+
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
