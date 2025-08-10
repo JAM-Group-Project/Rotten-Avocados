@@ -11,7 +11,7 @@ function Movie({ searchTerm, onAddFavorite, onRemoveFavorite, isFavorited }) {
   // Fetch movies from discover endpoint
   const getMovie = (page = 1) => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&page=${page}`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&page=${page}&include_adult=false`
     )
       .then((res) => res.json())
       .then((json) => {

@@ -52,7 +52,11 @@ function AboutUs() {
           </div>
         </div> */}
         <div className="JText">
-          <p>A student at JMU, interested in machine learning.</p>
+          <p>I’m Joseph Kabesha, a student at James Madison University passionate about software
+            development, artificial intelligence, and machine learning. I enjoy building projects
+            that combine creativity with problem-solving, from web applications to AI-driven tools.
+            When I’m not coding, I’m exploring new tech trends, contributing to open-source projects,
+            and learning how to turn ideas into reality.</p>
         </div>
       </div>
       <div className="AHeader">
@@ -103,11 +107,11 @@ function AboutUs() {
         <div className="MImage">
           <img src={MHeadshot} alt={"MHeadshot"} className="headshot" />
           <div className="email-icons">
-            <a href="mailto:micah@gmail.com" className="email-link"> 
+            <a href="mailto:micah@gmail.com" className="email-link">
               {/* // Micah put your gmail hjere */}
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
             </a>
-            <a href="mailto:micah@dukes.jmu.edu" className="email-link">  
+            <a href="mailto:micah@dukes.jmu.edu" className="email-link">
               {/* Micah put your outlook email here */}
               <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
             </a>

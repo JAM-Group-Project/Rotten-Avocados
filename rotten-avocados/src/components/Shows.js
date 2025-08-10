@@ -9,7 +9,7 @@ function Show({ searchTerm, onAddFavorite, onRemoveFavorite, isFavorited }) {
   const [totalPages, setTotalPages] = useState(1);
 
   const fetchTrendingShows = (page = 1) => {
-    fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=${API_KEY}&page=${page}`)
+    fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=${API_KEY}&page=${page}&&include_adult=false`)
       .then(res => res.json())
       .then((json) => {
         setShowList(json.results || []);
