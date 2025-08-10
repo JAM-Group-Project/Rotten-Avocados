@@ -33,3 +33,7 @@ We wanted the user to feel comfortable using the website which included having s
 
 ![ReactApp-Opera2025-07-3111-56-47-ezgif com-speed](https://github.com/user-attachments/assets/734eaaa0-dd39-4859-b441-85185cccca06)
 
+## A favorite tab for convenience
+The user has to be able to bookmark any findings he can make, going through that favorite list to gain an existential amount of time
+
+![ReactApp-Opera2025-08-1010-10-50-ezgif com-speed](https://github.com/user-attachments/assets/1ebaddd6-b29c-4dd7-ba8c-c97af8b65381)
