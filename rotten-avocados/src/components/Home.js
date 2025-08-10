@@ -117,7 +117,7 @@ function Home() {
     }
   }, []);
 
-  // Save favorites to localStorage whenever favorites change
+  // Save favorites to localStorage whenever favorites change (doesnt work yet)
   useEffect(() => {
     localStorage.setItem('rottenAvocadoFavorites', JSON.stringify(favorites));
   }, [favorites]);
