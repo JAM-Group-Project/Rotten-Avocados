@@ -107,11 +107,11 @@ function AboutUs() {
         <div className="MImage">
           <img src={MHeadshot} alt={"MHeadshot"} className="headshot" />
           <div className="email-icons">
-            <a href="mailto:micah@gmail.com" className="email-link">
+            <a href="mailto:mhdbjork@gmail.com" className="email-link"> 
               {/* // Micah put your gmail hjere */}
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="email-icon" />
             </a>
-            <a href="mailto:micah@dukes.jmu.edu" className="email-link">
+            <a href="mailto:bjorkgmd@dukes.jmu.edu" className="email-link">  
               {/* Micah put your outlook email here */}
               <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="email-icon" />
             </a>
@@ -122,8 +122,11 @@ function AboutUs() {
         </div>
         <div className="MText">
           <p>
-            A junior computer science major at James Madison University,
-            interested in software engineering and game development.
+            I’m a Senior majoring in Computer Science at James Madison University, 
+            with an interest for software engineering and game development.
+            Through my coursework and personal projects, I’ve developed a good foundation in programming 
+            and project development. I have always enjoyed the challenge of learning new programming languages
+            and development tools.
           </p>
         </div>
       </div>
