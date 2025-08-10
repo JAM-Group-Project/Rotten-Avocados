@@ -31,6 +31,7 @@ But of course a crucial part of this website is the search bar, functional and f
 ## Making the website enjoyable
 We wanted the user to feel comfortable using the website which included having some nice asthetique of each movie card, a intuitive font for the rating but also the hover function as well as a multiple page movie/shows.
 
+It is crucial for the website to be smooth, including a hover animation for the movie/shows card or a comfortable font with different colors.
 ![ReactApp-Opera2025-07-3111-56-47-ezgif com-speed](https://github.com/user-attachments/assets/734eaaa0-dd39-4859-b441-85185cccca06)
 
 ## A favorite tab for convenience
