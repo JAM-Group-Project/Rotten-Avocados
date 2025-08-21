@@ -5,10 +5,10 @@ It consists of pulling data provided by The Movie Database, using different lang
     - React
     - TailwindCSS
 - **Back end:**
-    - node.js ( for Java script full-stack )
+    - node.js (for Java script full-stack)
     - FastAPI
 - **Database** ( Movies, “Users”, Lists, Ratings): 
-    - PostgreSQL, IMDB API 
+    - PostgreSQL, TMDB API 
 
 # First template 🚗
 This was our first idea of what the website should look like and what should it do.
