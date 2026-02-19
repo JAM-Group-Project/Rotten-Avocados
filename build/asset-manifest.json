@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Rotten-Avocados/static/css/main.dbb2e466.css",
+    "main.js": "/Rotten-Avocados/static/js/main.6fcb5250.js",
+    "static/js/453.d05e1021.chunk.js": "/Rotten-Avocados/static/js/453.d05e1021.chunk.js",
+    "static/media/MicahHeadshot.JPG": "/Rotten-Avocados/static/media/MicahHeadshot.39b011ec75a5e3876b02.JPG",
+    "static/media/AlexHeadshot.jpg": "/Rotten-Avocados/static/media/AlexHeadshot.7b105b6266f123899f80.jpg",
+    "index.html": "/Rotten-Avocados/index.html",
+    "main.dbb2e466.css.map": "/Rotten-Avocados/static/css/main.dbb2e466.css.map",
+    "main.6fcb5250.js.map": "/Rotten-Avocados/static/js/main.6fcb5250.js.map",
+    "453.d05e1021.chunk.js.map": "/Rotten-Avocados/static/js/453.d05e1021.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbb2e466.css",
+    "static/js/main.6fcb5250.js"
+  ]
+}
