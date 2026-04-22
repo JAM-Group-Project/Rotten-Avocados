@@ -1,42 +1,141 @@
 # Rotten-Avocados 🥑
-Current live here: https://jam-group-project.github.io/Rotten-Avocados/
 
-Group project inspired by Rotten Tomatoes 🍅, made to browse movies from the TMDB API Database to rate them, write a note and add them to categories and lists. 
-It consists of pulling data provided by The Movie Database, using different language: 
-- **Front end:**
-    - React
-    - NPM
-- **Back end:**
-    - node.js (for Java script full-stack)
-    - FastAPI
-- **Database** ( Movies, “Users”, Lists, Ratings): 
-    - TMDB API 
+A collaborative group project inspired by Rotten Tomatoes 🍅, designed to help users browse movies from the TMDB API, rate them, write personal notes, and organize their discoveries into custom categories and lists.
 
-# First template 🚗
-This was our first idea of what the website should look like and what should it do.
+---
+
+## Project Overview
+
+Rotten-Avocados combines a modern, intuitive interface with powerful backend functionality to create a seamless movie discovery and tracking experience. Users can explore trending and top-rated movies, search in real-time, save favorites, and maintain personalized watchlists.
+
+---
+
+## Tech Stack
+
+### Frontend
+- **React** - UI framework
+- **TailwindCSS** - Styling and responsive design
+
+### Backend
+- **Node.js** - JavaScript runtime
+- **FastAPI** - Python API framework
+
+### Database & APIs
+- **PostgreSQL** - Data persistence (Movies, Users, Lists, Ratings)
+- **TMDB API** - Movie data source
+
+---
+
+## Features
+
+### 📽️ Homepage - Discover Movies
+Browse the most recent and top-rated movies and shows of the moment in a beautifully organized feed.
+
+[!](https://github.com/user-attachments/assets/0150404b-a29b-4716-91b5-5da757c200bd)
+
+**Highlights:**
+- Curated collections of trending content
+- Quick access to top-rated titles
+- Smooth, responsive layout
+
+---
+
+### 🔍 Real-Time Search & Filtering
+A powerful search bar that filters movies in real-time as you type, making it easy to find exactly what you're looking for.
+
+[!](https://github.com/user-attachments/assets/be5d6d57-1d42-40b4-8b4c-68665ca50600)
+
+**Highlights:**
+- Instant search results with each character typed
+- Smart filtering capabilities
+- Responsive and performant
+
+---
+
+### 🎨 Movie Card Design
+Crafted movie cards with smooth hover states, clear information hierarchy, and responsive animations.
+
+[!](https://github.com/user-attachments/assets/b85f152f-7997-4257-a89c-5c5183b0fbea)
+
+**Highlights:**
+- Clean, intuitive card layout
+- Smooth hover animations and transitions
+- Clear rating display and typography
+- Multi-page navigation for large collections
+
+---
+
+### ❤️ Favorites & Bookmarking
+Save your favorite discoveries for convenient future reference. Your bookmarked movies are always just a click away.
+
+[!](https://github.com/user-attachments/assets/a1b1471a-2b7c-4e10-a536-688d785f937d)
+
+**Highlights:**
+- Quick-add to favorites functionality
+- Easy access to bookmarked collection
+- Persistent storage across sessions
+- Helps users save time on future visits
+
+---
+
+## Design Templates
+
+### Initial Wireframes
+Our design process started with comprehensive wireframes to establish the user interface and experience flow.
 
 ![image](https://github.com/user-attachments/assets/552de725-bef2-41f7-a6b6-c9d71a19dc43)
 
 ![image](https://github.com/user-attachments/assets/04a04890-6ef5-42a1-a013-841e53cfe4ec)
 
-## Making the website functional
-From that point, we decided to have a main page where the user would be able to see the most recent but also top rated movies and shows of the moment.   
+---
 
-![ReactApp-Opera2025-07-3111-56-47-ezgif com-speed](https://github.com/user-attachments/assets/523f0c43-f697-487a-b7fa-203cec40674b)
+## Getting Started
 
-## An in-time filtering search bar
-But of course a crucial part of this website is the search bar, functional and filter movies in real time within each character typed
+### Prerequisites
+- Node.js and npm installed
+- Python 3.7+ (for FastAPI backend)
+- PostgreSQL database
 
-![ReactApp-Opera2025-07-3112-56-53-ezgif com-speed (1)](https://github.com/user-attachments/assets/94b74f36-9c85-4397-8f47-4ed82f55c3a0)
+### Installation
 
+```bash
+# Clone the repository
+git clone https://github.com/JAM-Group-Project/Rotten-Avocados.git
+cd Rotten-Avocados
 
-## Making the website enjoyable
-We wanted the user to feel comfortable using the website which included having some nice asthetique of each movie card, a intuitive font for the rating but also the hover function as well as a multiple page movie/shows.
+# Install frontend dependencies
+cd frontend
+npm install
 
-It is crucial for the website to be smooth, including a hover animation for the movie/shows card or a comfortable font with different colors.
-![ReactApp-Opera2025-07-3111-56-47-ezgif com-speed](https://github.com/user-attachments/assets/734eaaa0-dd39-4859-b441-85185cccca06)
+# Install backend dependencies (Python)
+cd ../backend
+pip install -r requirements.txt
+```
 
-## A favorite tab for convenience
-The user has to be able to bookmark any findings he can make, going through that favorite list to gain an existential amount of time
+### Running the Application
 
-![ReactApp-Opera2025-08-1010-10-50-ezgif com-speed](https://github.com/user-attachments/assets/1ebaddd6-b29c-4dd7-ba8c-c97af8b65381)
+**Frontend:**
+```bash
+cd frontend
+npm start
+```
+
+**Backend:**
+```bash
+cd backend
+python main.py
+```
+
+---
+
+## Team & Contributors
+
+This project was developed collaboratively with [JAM](https://github.com/JAM-Group-Project) to showcase full-stack development skills, teamwork, and attention to user experience design.
+- [Joseph](https://github.com/Giltson1)
+- [Alex (myself)](https://github.com/Alex-Ng10)
+- [Micah Bjorkgren](https://github.com/bjorkgmd)
+---
+
+## License
+
+[Your License Here]
