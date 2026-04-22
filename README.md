@@ -5,12 +5,12 @@ Group project inspired by Rotten Tomatoes 🍅, made to browse movies from the T
 It consists of pulling data provided by The Movie Database, using different language: 
 - **Front end:**
     - React
-    - TailwindCSS
+    - NPM
 - **Back end:**
     - node.js (for Java script full-stack)
     - FastAPI
 - **Database** ( Movies, “Users”, Lists, Ratings): 
-    - PostgreSQL, TMDB API 
+    - TMDB API 
 
 # First template 🚗
 This was our first idea of what the website should look like and what should it do.
